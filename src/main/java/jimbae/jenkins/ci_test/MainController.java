@@ -36,4 +36,11 @@ public class MainController {
 
 	}
 
+	@GetMapping("/health")
+	public ResponseEntity health(){
+
+		return ResponseEntity.ok("UP");
+
+	}
+
 }
