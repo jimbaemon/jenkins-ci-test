@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'jimbae.jenkins'
-version = '0.0.5'
+version = '0.0.6'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -26,4 +26,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+processResources {
+    filesMatching('**/application.properties') {
+        expand(project.properties)
+    }
 }
